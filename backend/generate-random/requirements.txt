@@ -10,8 +10,8 @@ numpy~=2.2.1
 alembic~=1.14.0
 toml~=0.10.2
 tomli~=2.2.1
-
-
+qrcode~=8.0.0
+Pillow~=11.0.0
 
 # dev
 flake8~=7.1.1
