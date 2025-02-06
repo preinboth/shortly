@@ -1,11 +1,10 @@
-from dotenv import find_dotenv, load_dotenv
-
 from config.database.databases import DatabaseSettings
 from config.media import MediaSettings
 from config.openapi import OpenApiSettings
 from config.running_mode import RunningModeSettings
 from config.security import SecuritySettings
 from config.server import ServerSettings
+from dotenv import find_dotenv, load_dotenv
 
 load_dotenv(find_dotenv())
 

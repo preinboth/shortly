@@ -1,8 +1,6 @@
 from typing import List
 
-from fastapi import APIRouter, Depends
-from markdown import markdown
-from starlette.requests import Request
+from fastapi import APIRouter
 
 from src.config.settings import settings
 from src.modules.uuid_generator import descr, schema
