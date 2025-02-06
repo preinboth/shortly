@@ -1,7 +1,7 @@
 import random
 import string
 
-from src.modules.url_shortener.schema import ShortenerResponse, ShortenerCreateRequest
+from src.modules.url_shortener.schema import ShortenerCreateRequest, ShortenerResponse
 
 
 class UrlShortenerService:

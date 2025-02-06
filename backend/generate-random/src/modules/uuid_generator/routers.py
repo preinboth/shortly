@@ -1,6 +1,7 @@
 from typing import List
-from markdown import markdown
+
 from fastapi import APIRouter, Depends
+from markdown import markdown
 from starlette.requests import Request
 
 from src.config.settings import settings
