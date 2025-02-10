@@ -1,22 +1,19 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, PositiveInt, HttpUrl
 
 
 #######################################################################
 ## 										Basic informations Schemas	    							 ##
 #######################################################################
 class ShortenerBase(BaseModel):
-    target_url: str
+    domain: HttpUrl
+    target_url: str = ''
 
 
 #######################################################################
 ## 												Request Schemas														 ##
 #######################################################################
 class ShortenerCreateRequest(ShortenerBase):
-    # destination: str
-    # self_short: str
-    # title: str
-    domain: str
-    # custom_back: str
+    pass
 
 
 class ShortenerUpdateRequest(ShortenerBase):
@@ -32,6 +29,7 @@ class ShortenerResponse(ShortenerBase):
     """
 
     shortened_url: str
+    short: str
 
     class Config:
         from_attributes = True

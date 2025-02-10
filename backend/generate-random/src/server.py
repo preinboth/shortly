@@ -6,6 +6,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from config.settings import settings
 from logger.logger import logger
 from src.modules.info.router import router as info_router
+from src.modules.qr_code.routers import router as qrcode_router
+from src.modules.url_shortener.routers import router as shortener_router
+from src.modules.uuid_generator.routers import router as uuid_router
 
 
 @asynccontextmanager
@@ -53,6 +56,9 @@ def create_api() -> FastAPI:
     )
 
     _app.include_router(info_router)
+    _app.include_router(qrcode_router)
+    _app.include_router(shortener_router)
+    _app.include_router(uuid_router)
 
     return _app
 
